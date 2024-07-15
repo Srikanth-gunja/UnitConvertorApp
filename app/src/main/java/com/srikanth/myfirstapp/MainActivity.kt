@@ -11,6 +11,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -71,7 +72,9 @@ fun UnitConvertor(){
             .padding(5.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment =Alignment.CenterHorizontally) {
-            Text(text = "Unit Convertor")
+            Text(text = "Unit Convertor",
+                style=MaterialTheme.typography.headlineSmall)
+
             OutlinedTextField(value = outlineText,
                 onValueChange ={
                     outlineText=it
@@ -150,7 +153,9 @@ fun UnitConvertor(){
 
 
             }
-            Text(text = "Result is: ${output}")
+            Text(text = "Result is: ${output} $outputUnit",
+                style=MaterialTheme.typography.bodyLarge
+            )
         }
     }
 
